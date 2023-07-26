@@ -803,7 +803,7 @@ header .mobile-menu {
   max-width: 215px;
   padding: 20px 29px 20px 29px;
   border-radius: 100px;
-  box-shadow: 0px 20px 40px -10px rgba(0, 65, 131, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(0, 65, 131, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -813,6 +813,12 @@ header .mobile-menu {
   font-weight: 700;
   line-height: 23.8px;
   text-transform: uppercase;
+}
+.software-btn:hover {
+  background-color: #FF263D;
+}
+.software-btn:active {
+  background-color: #D5141D;
 }
 @media only screen and (max-width: 991px) {
   .software-btn {
@@ -875,7 +881,7 @@ header .mobile-menu {
   text-align: center;
   border-radius: 20px;
   background: #FFF;
-  box-shadow: 0px 2px 21px 0px #0C71C3;
+  box-shadow: 0 2px 21px 0 #0C71C3;
   width: 391.59px;
   height: 324px;
   padding: 40px;
@@ -935,7 +941,7 @@ header .mobile-menu {
   background: #ffffff;
   border-radius: 10px;
   background: #FFF;
-  box-shadow: 0px 40px 60px -8px rgba(10, 45, 97, 0.48);
+  box-shadow: 0 40px 60px -8px rgba(10, 45, 97, 0.48);
 }
 @media only screen and (max-width: 991px) {
   .contact-us__content {
@@ -1052,7 +1058,7 @@ header .mobile-menu {
   max-width: 207px;
   padding: 20px 29px 20px 29px;
   border-radius: 100px;
-  box-shadow: 0px 20px 40px -10px rgba(0, 65, 131, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(0, 65, 131, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1062,6 +1068,13 @@ header .mobile-menu {
   font-weight: 700;
   line-height: 23.8px;
   text-transform: uppercase;
+}
+.contact-us__btn:hover {
+  background: radial-gradient(70.71% 70.71% at 50% 50%, #640FA7 0%, #3C0058 100%);
+  text-shadow: 0 0 14px 0 #FFF;
+}
+.contact-us__btn:active {
+  background: radial-gradient(70.71% 70.71% at 50% 50%, #432265 0%, #40005E 100%);
 }
 .contact-us .bg-image {
   position: absolute;

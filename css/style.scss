@@ -47,7 +47,7 @@
 @mixin radius-button {
   padding: 20px 29px 20px 29px;
   border-radius: 100px;
-  box-shadow: 0px 20px 40px -10px rgba(0, 65, 131, 0.40);
+  box-shadow: 0 20px 40px -10px rgba(0, 65, 131, 0.40);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -750,6 +750,14 @@ header {
     max-width: 215px;
     @include radius-button;
 
+    &:hover {
+      background-color: $red-soft-hover;
+    }
+
+    &:active {
+      background-color: $red-soft-click;
+    }
+
     @media only screen and (max-width: 991px) {
       margin-top: 34px;
     }
@@ -804,7 +812,7 @@ header {
       text-align: center;
       border-radius: 20px;
       background: #FFF;
-      box-shadow: 0px 2px 21px 0px #0C71C3;
+      box-shadow: 0 2px 21px 0 #0C71C3;
       width: 391.59px;
       height: 324px;
       padding: 40px;
@@ -864,7 +872,7 @@ header {
     background: $white;
     border-radius: 10px;
     background: #FFF;
-    box-shadow: 0px 40px 60px -8px rgba(10, 45, 97, 0.48);
+    box-shadow: 0 40px 60px -8px rgba(10, 45, 97, 0.48);
 
     @media only screen and (max-width: 991px) {
       flex-direction: column;
@@ -992,6 +1000,15 @@ header {
     margin-top: 0;
     max-width: 207px;
     @include radius-button;
+
+    &:hover {
+      background: radial-gradient(70.71% 70.71% at 50% 50%, #640FA7 0%, #3C0058 100%);
+      text-shadow: 0 0 14px 0 #FFF;
+    }
+
+    &:active {
+      background: radial-gradient(70.71% 70.71% at 50% 50%, #432265 0%, #40005E 100%);
+    }
   }
 
   .bg-image {
