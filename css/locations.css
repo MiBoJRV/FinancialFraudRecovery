@@ -1,0 +1,142 @@
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: #170463;
+}
+header .header-content {
+  margin: 0 auto 0 auto;
+}
+
+.our-office {
+  background-image: url("../images/locations_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding-top: 165px;
+  max-width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .our-office {
+    padding-top: 90px;
+  }
+}
+.our-office .title {
+  color: #ffffff;
+}
+.our-office-list {
+  margin-top: 108px;
+}
+@media only screen and (max-width: 991px) {
+  .our-office-list {
+    margin-top: 82px;
+  }
+}
+.our-office-list__item {
+  padding: 60px 20px;
+  min-height: 420px;
+}
+.our-office-list__item:nth-child(2) {
+  margin-top: -50px;
+  min-height: 470px;
+}
+@media only screen and (max-width: 991px) {
+  .our-office-list__item:nth-child(2) {
+    margin-top: 0;
+  }
+}
+.our-office__locations {
+  margin-bottom: -36px;
+}
+@media only screen and (max-width: 991px) {
+  .our-office__locations {
+    margin-bottom: 60px;
+  }
+}
+
+.location {
+  color: #ffffff;
+  background: #15045C;
+  padding-top: 40px;
+}
+@media only screen and (max-width: 991px) {
+  .location {
+    padding-top: 0;
+  }
+}
+.location__content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.location__text-content {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1200px) {
+  .location__text-content {
+    padding: 80px 45px;
+  }
+}
+.location h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  padding-top: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .location h3 {
+    padding: 0;
+  }
+}
+.location h5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23.8px;
+  margin-top: 12px;
+}
+.location p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 23.8px;
+  margin-top: 28px;
+  max-width: 955px;
+}
+.location__map {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .location__map {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .location__map {
+    margin-bottom: 0;
+  }
+}
+.location__map img {
+  width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 991px) {
+  .location__map img {
+    min-height: 450px;
+    object-fit: cover;
+  }
+}
+
+.contact-us {
+  background: #15045C;
+  padding-top: 18px;
+}
+
+/*# sourceMappingURL=locations.css.map */

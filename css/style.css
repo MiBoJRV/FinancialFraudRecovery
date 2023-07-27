@@ -987,9 +987,9 @@ a {
   color: #666;
 }
 .contact-us__company {
-  padding-left: 40px;
+  padding: 0 40px;
   border-radius: 10px 0 0 10px;
-  min-width: 355px;
+  min-width: 375px;
 }
 @media only screen and (max-width: 991px) {
   .contact-us__company {
