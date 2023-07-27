@@ -218,12 +218,20 @@ header {
       font-weight: 400;
       line-height: 14px;
       text-transform: capitalize;
+
+      &:hover {
+        text-shadow: 0 0 8px white;
+      }
     }
 
     &__big-link {
       color: $pale-yellow;
       font-size: 14px;
       font-weight: 700;
+
+      &:hover {
+        text-shadow: 0 1px 4px #F9E8BF;
+      }
     }
 
     &__btn {
@@ -231,11 +239,17 @@ header {
       line-height: 23.8px;
       font-size: 14px;
       font-weight: 700;
-      padding: 5.19px 15.91px 6.98px 16px;
+      padding: 5px 16px 5px 16px;
       border: 2px solid $red-pale;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:hover {
+        text-shadow: none;
+        color: $red-pale-hover;
+        border-color: $red-pale-hover;
+      }
     }
   }
 
@@ -862,6 +876,12 @@ header {
 
 .contact-us {
   position: relative;
+  padding-bottom: 141px;
+  overflow: hidden;
+  
+  @media only screen and (max-width: 991px) {
+    padding-bottom: 36px;
+  }
 
   &__content {
     @include section-content;
@@ -903,7 +923,7 @@ header {
     padding-left: 40px;
     border-radius: 10px 0 0 10px;
     min-width: 355px;
-    
+
     @media only screen and (max-width: 991px) {
       margin-bottom: 90px;
     }
@@ -973,7 +993,7 @@ header {
     align-items: end;
     padding-right: 58px;
     border-radius: 0 10px 10px 0;
-    
+
     @media only screen and (max-width: 991px) {
       background-image: url("../images/contact_bg_mob.png");
       background-size: cover;
@@ -1003,11 +1023,12 @@ header {
 
     &:hover {
       background: radial-gradient(70.71% 70.71% at 50% 50%, #640FA7 0%, #3C0058 100%);
-      text-shadow: 0 0 14px 0 #FFF;
+      text-shadow: 0 0 14px #FFF;
     }
 
     &:active {
       background: radial-gradient(70.71% 70.71% at 50% 50%, #432265 0%, #40005E 100%);
+      text-shadow: none;
     }
   }
 
@@ -1015,10 +1036,234 @@ header {
     position: absolute;
     top: 92px;
     z-index: 1;
-    
+    transform: translate(-50%, 0px);
+    left: 50%;
+
     @media only screen and (max-width: 991px) {
       bottom: -37px;
       top: auto;
+    }
+  }
+}
+
+.footer {
+  background-color: #222;
+  padding-top: 153px;
+
+  @media only screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+
+  &-content {
+    max-width: 1182px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 71px;
+
+    @media only screen and (max-width: 991px) {
+      padding: 0 35px 84px;
+      flex-direction: column;
+    }
+  }
+
+  &-nav {
+    max-width: 166px;
+    width: 1000%;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 89px;
+    }
+
+    h5 {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 32px;
+      color: $red-soft;
+      margin-bottom: 11px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      li {
+        margin-left: 1em;
+
+        &::before {
+          content: "\2022";
+          color: $red-soft;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+
+
+    a {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      color: $white;
+    }
+  }
+
+  &-address {
+    max-width: 294px;
+    width: 100%;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 46px;
+      max-width: 100%;
+    }
+
+    p {
+      font-size: 14px;
+      font-style: normal;
+      line-height: 23.8px;
+      color: $white;
+      padding: 0 15px;
+
+      @media only screen and (max-width: 991px) {
+        padding: 0;
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-logos {
+    max-width: 543px;
+    width: 100%;
+
+    @media only screen and (max-width: 991px) {
+      max-width: 100%;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 71px;
+      column-gap: 15px;
+
+      @media only screen and (max-width: 991px) {
+        align-items: center;
+        justify-content: center;
+        gap: 34px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      li {
+
+
+        @media only screen and (max-width: 480px) {
+          width: 100%;
+          text-align: center;
+        }
+
+        @media only screen and (max-width: 480px) {
+
+
+          &:nth-child(1) {
+            order: 1;
+
+            img {
+              height: 100px;
+              width: 100px;
+            }
+          }
+
+          &:nth-child(2) {
+            order: 6;
+
+            img {
+              height: 100px;
+              width: 100px;
+            }
+          }
+
+          &:nth-child(3) {
+            order: 2;
+
+            img {
+              height: 100px;
+              width: 100px;
+            }
+          }
+
+          &:nth-child(4) {
+            order: 7;
+
+            img {
+              height: 100px;
+              width: 100px;
+            }
+          }
+
+          &:nth-child(5) {
+            order: 3;
+
+            img {
+              width: 200px;
+            }
+          }
+
+          &:nth-child(6) {
+            order: 8;
+
+            img {
+              width: 200px;
+            }
+          }
+
+          &:nth-child(7) {
+            order: 4;
+
+            img {
+              width: 200px;
+            }
+          }
+
+          &:nth-child(8) {
+            order: 9;
+
+            img {
+              width: 200px;
+            }
+          }
+
+          &:nth-child(9) {
+            order: 5;
+
+            img {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-copyright {
+    background: rgba(0, 0, 0, 0.32);
+    padding: 14px 15px 16px;
+    text-align: center;
+
+    small {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 23.8px;
+      color: $text-color;
     }
   }
 }
