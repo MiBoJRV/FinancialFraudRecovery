@@ -1,0 +1,174 @@
+//mixin
+@mixin transparent-button {
+  padding: 13px 0 14.8px 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 23.8px;
+  text-transform: uppercase;
+  color: $red-strong;
+  border: 2px solid $red-strong;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 305px;
+  height: 52px;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  &:active {
+    border-color: #BB1123;
+    background-color: transparent;
+  }
+}
+
+@mixin radius-button {
+  padding: 20px 29px 20px 29px;
+  border-radius: 100px;
+  box-shadow: 0 20px 40px -10px rgba(0, 65, 131, 0.40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: $white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 23.8px;
+  text-transform: uppercase;
+}
+
+@mixin bg-image {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  z-index: 1;
+  transform: translate(-50%, 0px);
+  left: 50%;
+  width: 100%;
+}
+
+@mixin text-content {
+
+  .sub-title {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    color: $red-pale;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+  }
+
+  .title {
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 61.6px;
+    color: $white;
+    padding: 11px 0 74px;
+    position: relative;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 25px;
+      line-height: 28.6px;
+      padding: 11px 0 66px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 46px;
+      height: 2px;
+      width: 100px;
+      background-color: $red-pale;
+
+      @media only screen and (max-width: 991px) {
+        bottom: 33px;
+      }
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30.6px;
+    color: $white;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 13px;
+      line-height: 25.2px;
+    }
+  }
+}
+
+@mixin section-content {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  z-index: 9;
+}
+
+@mixin title {
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 61.6px;
+  color: $white;
+  padding: 11px 0 36px;
+  position: relative;
+}
+
+@mixin text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30.6px;
+  color: $white;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+$title-color: #333;
+$text-color: #666;
+;
+$blue: #170463;
+$red-light: #FF646B;
+$red-light-hover: #FF2731;
+$red-light-click: #D5141D;
+
+$red-strong: #FF4B38;
+$red-strong-hover: #FF7F72;
+$red-strong-click: #E82E1A;
+
+$red-soft: #FF5A6B;
+$red-soft-hover: #FF263D;
+$red-soft-click: #D5141D;
+
+$red-pale: #FE8275;
+$red-pale-hover: #FF4E3C;
+$red-pale-click: #BC2313;
+
+
+$red-sub-title: #FC9F70;
+
+$white: #ffffff;
+$black: #000000;
+$pale-yellow: #F2DA9D;
+
+
+$blue-gradient: radial-gradient(70.71% 70.71% at 50% 50%, #160070 0%, #34004C 100%);

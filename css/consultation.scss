@@ -1,0 +1,240 @@
+@import "variables.scss";
+
+header {
+  background: #170463;
+
+  .header-content {
+    margin: 0 auto 0 auto;
+
+  }
+}
+
+.consultation {
+  background-image: url("../images/consult_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 1014px;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @media only screen and (max-width: 1200px) {
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 991px) {
+    height: auto;
+  }
+
+
+  &-content {
+    width: 100%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 9;
+    gap: 40px;
+    padding: 112px 65px 0;
+    max-width: 1440px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      padding: 95px 15px 140px 15px;
+      align-items: center;
+      gap: 99px;
+    }
+  }
+
+  &-text {
+    margin-bottom: 18px;
+    margin-left: 20px;
+
+    .title {
+      @include title;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 56px;
+        line-height: 52px;
+      }
+    }
+
+    p {
+      @include text;
+      max-width: 566px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 13px;
+        line-height: 23.8px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &-image {
+    max-width: 700px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .bg-image {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    transform: translate(-50%, 0px);
+    left: 50%;
+    bottom: -7px;
+    width: 100%;
+    height: auto;
+    min-width: 1922px;
+
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.leave-message {
+  position: relative;
+  max-width: 1920px;
+  margin: -113px auto 131px auto;
+
+  @media only screen and (max-width: 991px) {
+    margin: 48px 0 0;
+  }
+
+  &-content {
+    @include section-content;
+    flex-direction: column;
+    max-width: 1440px;
+    padding: 0 60px;
+
+    @media only screen and (max-width: 991px) {
+      padding: 0;
+    }
+  }
+
+  .title {
+    color: $title-color;
+    text-align: center;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 40px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 27px;
+      line-height: 27px;
+    }
+  }
+
+  &-list {
+    display: flex;
+    gap: 43px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 162px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 28px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 20px;
+      background: #FFF;
+      box-shadow: 0px 10px 60px 0px rgba(10, 45, 97, 0.10);
+      width: 391.59px;
+      height: 324px;
+      padding: 40px;
+
+      @media only screen and (max-width: 991px) {
+        padding: 20px;
+        max-width: 360px;
+        width: 100%;
+        height: 324px;
+      }
+
+      @media only screen and (max-width: 480px) {
+        max-width: 100%;
+      }
+
+      &:nth-child(2) {
+        margin-top: -55px;
+        @media only screen and (max-width: 991px) {
+          margin-top: 0;
+        }
+      }
+
+      img {
+        margin-bottom: 29px;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+        margin-bottom: 12px;
+        color: $title-color;
+      }
+
+      h5 {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23.8px;
+        margin-bottom: 22px;
+        color: $title-color;
+
+      }
+
+      p {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 25.2px;
+        color: $title-color;
+
+        a {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+  max-width: 1440px;
+  width: 100%;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    @media only screen and (max-width: 991px) {
+      min-height: 450px;
+      object-fit: cover;
+    }
+  }
+}

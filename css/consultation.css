@@ -1,0 +1,256 @@
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: #170463;
+}
+header .header-content {
+  margin: 0 auto 0 auto;
+}
+
+.consultation {
+  background-image: url("../images/consult_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 1014px;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1200px) {
+  .consultation {
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .consultation {
+    height: auto;
+  }
+}
+.consultation-content {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 9;
+  gap: 40px;
+  padding: 112px 65px 0;
+  max-width: 1440px;
+}
+@media only screen and (max-width: 991px) {
+  .consultation-content {
+    flex-direction: column;
+    padding: 95px 15px 140px 15px;
+    align-items: center;
+    gap: 99px;
+  }
+}
+.consultation-text {
+  margin-bottom: 18px;
+  margin-left: 20px;
+}
+.consultation-text .title {
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 61.6px;
+  color: #ffffff;
+  padding: 11px 0 36px;
+  position: relative;
+}
+@media only screen and (max-width: 991px) {
+  .consultation-text .title {
+    font-size: 56px;
+    line-height: 52px;
+  }
+}
+.consultation-text p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30.6px;
+  color: #ffffff;
+  max-width: 566px;
+}
+@media only screen and (max-width: 991px) {
+  .consultation-text p {
+    font-size: 13px;
+    line-height: 23.8px;
+    max-width: 100%;
+  }
+}
+.consultation-image {
+  max-width: 700px;
+  width: 100%;
+}
+.consultation-image img {
+  width: 100%;
+  height: auto;
+}
+.consultation .bg-image {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  transform: translate(-50%, 0px);
+  left: 50%;
+  bottom: -7px;
+  width: 100%;
+  height: auto;
+  min-width: 1922px;
+}
+@media only screen and (max-width: 991px) {
+  .consultation .bg-image {
+    display: none;
+  }
+}
+.consultation .bg-image img {
+  width: 100%;
+  height: auto;
+}
+
+.leave-message {
+  position: relative;
+  max-width: 1920px;
+  margin: -113px auto 131px auto;
+}
+@media only screen and (max-width: 991px) {
+  .leave-message {
+    margin: 48px 0 0;
+  }
+}
+.leave-message-content {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  z-index: 9;
+  flex-direction: column;
+  max-width: 1440px;
+  padding: 0 60px;
+}
+@media only screen and (max-width: 991px) {
+  .leave-message-content {
+    padding: 0;
+  }
+}
+.leave-message .title {
+  color: #333;
+  text-align: center;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 40px;
+}
+@media only screen and (max-width: 991px) {
+  .leave-message .title {
+    font-size: 27px;
+    line-height: 27px;
+  }
+}
+.leave-message-list {
+  display: flex;
+  gap: 43px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 162px;
+}
+@media only screen and (max-width: 991px) {
+  .leave-message-list {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 28px;
+  }
+}
+.leave-message-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 10px 60px 0px rgba(10, 45, 97, 0.1);
+  width: 391.59px;
+  height: 324px;
+  padding: 40px;
+}
+@media only screen and (max-width: 991px) {
+  .leave-message-list__item {
+    padding: 20px;
+    max-width: 360px;
+    width: 100%;
+    height: 324px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .leave-message-list__item {
+    max-width: 100%;
+  }
+}
+.leave-message-list__item:nth-child(2) {
+  margin-top: -55px;
+}
+@media only screen and (max-width: 991px) {
+  .leave-message-list__item:nth-child(2) {
+    margin-top: 0;
+  }
+}
+.leave-message-list__item img {
+  margin-bottom: 29px;
+}
+.leave-message-list__item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 12px;
+  color: #333;
+}
+.leave-message-list__item h5 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.8px;
+  margin-bottom: 22px;
+  color: #333;
+}
+.leave-message-list__item p {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 25.2px;
+  color: #333;
+}
+.leave-message-list__item p a {
+  color: #666;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+  max-width: 1440px;
+  width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .map {
+    margin-bottom: 0;
+  }
+}
+.map img {
+  width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 991px) {
+  .map img {
+    min-height: 450px;
+    object-fit: cover;
+  }
+}
+
+/*# sourceMappingURL=consultation.css.map */
