@@ -1,0 +1,74 @@
+@import "variables.scss";
+
+header {
+  background: #170463;
+
+  .header-content {
+    margin: 0 auto 0 auto;
+  }
+}
+
+.privacy-policy {
+  &__content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 55px 60px 47px;
+    
+    @media only screen and (max-width: 991px) {
+      padding: 17px 15px 74px;
+    }
+
+    h1 {
+      margin-bottom: 9px;
+      color: $title-color;
+      font-size: 47px;
+      font-weight: 700;
+      line-height: 48px;
+      
+      @media only screen and (max-width: 991px) {
+        font-size: 36px;
+        line-height: 28px;
+        margin-bottom: 18px;
+      }
+    }
+
+    h3 {
+      color: $title-color;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+      margin-bottom: 9px;
+      
+      @media only screen and (max-width: 991px) {
+        font-size: 27px;
+        line-height: 27px;
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      color: $text-color;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 23.8px;
+      margin-bottom: 13px;
+    }
+
+    ul {
+      margin-bottom: 13px;
+
+      li {
+        color: $text-color;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 23.8px;
+        padding-left: 14px;
+      }
+    }
+a {
+  color: #2EA3F2;
+}
+
+  }
+}
