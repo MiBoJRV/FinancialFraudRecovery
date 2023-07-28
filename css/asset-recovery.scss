@@ -1,0 +1,399 @@
+@import "variables.scss";
+
+header {
+  background: #170463;
+
+  .header-content {
+    margin: 0 auto 0 auto;
+
+  }
+}
+
+.asset-recovery {
+  background-image: url("../images/consult_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 1252px;
+  //max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @media only screen and (max-width: 1200px) {
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 991px) {
+    height: auto;
+  }
+
+  &__content {
+    width: 100%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 9;
+    gap: 40px;
+    padding: 112px 65px 0;
+    max-width: 1440px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      padding: 144px 15px 103px 15px;
+      align-items: center;
+      gap: 99px;
+    }
+  }
+
+  &__text {
+    margin-left: 20px;
+    max-width: 630px;
+    width: 100%;
+
+    @media only screen and (max-width: 991px) {
+      margin: 0;
+    }
+
+    .title {
+      font-size: 83px;
+      font-weight: 700;
+      line-height: 84px;
+      color: $white;
+      margin-bottom: 43px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 31px;
+        line-height: 32px;
+        margin-bottom: 41px;
+      }
+    }
+
+    p {
+      color: $white;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.8px;
+      margin-bottom: 22px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 13px;
+        line-height: 23.8px;
+        margin-bottom: 21px;
+      }
+    }
+  }
+
+  &__btn {
+    background: #FF7277;
+    margin-top: 61px;
+    max-width: 296px;
+    @include radius-button;
+
+    &:hover {
+      background-color: $red-soft-hover;
+    }
+
+    &:active {
+      background-color: $red-soft-click;
+    }
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 38px;
+    }
+  }
+
+  .bg-image {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    transform: translate(-50%, 0px);
+    left: 50%;
+    bottom: -7px;
+    width: 100%;
+    height: auto;
+    //min-width: 1922px;
+    min-width: auto;
+
+    @media only screen and (max-width: 991px) {
+      position: static;
+
+      transform: none;
+    }
+
+    .desktop {
+
+      @media only screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    .mobile {
+      display: none;
+
+      @media only screen and (max-width: 991px) {
+        display: block;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.asset-recovery-about {
+
+  &__content {
+    max-width: 1440px;
+    margin: 0 auto 195px auto;
+    padding: 0 60px;
+
+    @media only screen and (max-width: 991px) {
+      padding: 0 15px;
+      margin: 0 auto ;
+    }
+  }
+
+  &__title {
+    margin: 62px 0 71px;
+
+    @media only screen and (max-width: 991px) {
+      margin: 32px 0px 25px;
+    }
+
+    h3 {
+      color: $blue;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+
+    h5 {
+      color: $title-color;
+      text-align: center;
+      font-size: 27.8px;
+      font-weight: 700;
+      line-height: 31.68px
+    }
+
+    p {
+      max-width: 703px;
+      margin: 32px auto 0 auto;
+
+    }
+  }
+
+  p {
+    color: $text-color;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25.2px;
+  }
+
+  &__boxes {
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      @media only screen and (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 55px;
+      }
+
+      &__item {
+        max-width: 390px;
+        width: 100%;
+      }
+    }
+
+    h5 {
+      color: $title-color;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25.2px;
+      margin-bottom: 35px;
+    }
+
+    p {
+    }
+  }
+}
+
+.asset-recovery-bottom {
+  position: relative;
+  padding: 250px 0 215px;
+  height: 1076px;
+  margin: 0 auto;
+  background-image: url("../images/cryptocurrency_bg_bot_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: 991px) {
+    overflow: hidden;
+    padding: 0 15px 149px;
+    background-image: url("../images/cryptocurrency_bgb.png");
+    height: auto;
+  }
+
+  .bg-image {
+    @include bg-image;
+
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .bg-image__mobile {
+    @include bg-image;
+    width: 100%;
+    display: none;
+
+    @media only screen and (max-width: 991px) {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    z-index: 9;
+    gap: 10px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    padding: 0 0 54px 41px;
+    width: 50%;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    padding: 227px 41px 0 0;
+    width: 50%;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      padding: 0;
+      margin-top: -46px;
+    }
+
+    .sub-title {
+      color: $white;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 7px;
+      display: inline-block;
+    }
+
+    .title {
+      color: $white;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 26px;
+      position: relative;
+      padding-bottom: 70px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 34px;
+        height: 2px;
+        width: 100px;
+        background-color: $red-pale;
+
+        @media only screen and (max-width: 991px) {
+          bottom: 33px;
+        }
+      }
+    }
+
+    p {
+      max-width: 623px;
+      width: 100%;
+      color: $white;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 23.8px;
+
+      &:nth-of-type(2) {
+        margin-top: 22px;
+      }
+    }
+
+    .about-btn {
+      @include transparent-button;
+      margin-top: 43px;
+    }
+  }
+
+  .bottom-image {
+    position: absolute;
+    right: 0;
+    bottom: -210px;
+    z-index: 2;
+
+    @media only screen and (max-width: 991px) {
+      bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      @media only screen and (max-width: 1440px) {
+        max-width: 500px;
+      }
+
+      &.desktop {
+        @media only screen and (max-width: 991px) {
+          display: none;
+        }
+      }
+
+      &.mobile {
+        display: none;
+        @media only screen and (max-width: 991px) {
+          display: block;
+        }
+      }
+    }
+
+  }
+}
+
+.contact-us {
+  background: radial-gradient(70.71% 70.71% at 50% 50%, #4801E6 0%, #001F4C 100%, #1F0376 100%);
+
+}
