@@ -32,6 +32,73 @@
       <img src="images/mobile_menu.svg" alt="mobile menu">
     </div>
   </div>
+  <div class="dialog">
+    <div class="dialog__wrap">
+      <div class="dialog__content">
+        <div class="dialog__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <circle cx="17" cy="17" r="17" fill="white"/>
+            <path d="M9 26L25.9706 9.02944" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 9L25.9706 25.9706" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h2>Write your details to get in touch with an expert</h2>
+        <form method="post" id="mypost" action="" class="dr-form">
+
+          <div class="form__field">
+            <span>Name</span>
+            <input type="text" class="dr-field-fname" placeholder="Your name">
+          </div>
+          <div class="form__field">
+            <span>Last Name</span>
+            <input type="text" class="dr-field-lname" placeholder="Your last name">
+          </div>
+          <div class="form__field">
+            <span>E-mail</span>
+            <input type="text" class="dr-field-email" placeholder="E-mail">
+          </div>
+          <div class="phone-input form__field">
+            <div class="select-box">
+              <div class="select-box__current" tabindex="1">
+                <div class="select-box__value">
+                  <span>Phone number</span>
+                  <input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked"/>
+                  <p class="select-box__input-text">+1</p>
+                </div>
+                <div class="select-box__value">
+                  <input class="select-box__input" type="radio" id="1" value="2" name="Ben"/>
+                  <p class="select-box__input-text">+44</p>
+                </div>
+                <div class="select-box__value">
+                  <input class="select-box__input" type="radio" id="2" value="3" name="Ben"/>
+                  <p class="select-box__input-text">+61</p>
+                </div>
+              </div>
+              <ul class="select-box__list">
+                <li>
+                  <label class="select-box__option" for="0" aria-hidden="aria-hidden">+1</label>
+                </li>
+                <li>
+                  <label class="select-box__option" for="1" aria-hidden="aria-hidden">+44</label>
+                </li>
+                <li>
+                  <label class="select-box__option" for="2" aria-hidden="aria-hidden">+61</label>
+                </li>
+              </ul>
+            </div>
+            <input type="text" class="dr-field-phone" placeholder="(xxx) xxx-xxxx">
+            <div class="error-message dr-field-phone-error"></div>
+          </div>
+          <div class="form__field form_submit">
+            <input type="submit" class="dr-field-submit" id="submit_btn" value="Send">
+          </div>
+        </form>
+        <div class="dialog__image">
+          <img src="images/dialog_img.png" alt="dialog">
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 <main>
   <section class="main-video">
@@ -43,7 +110,7 @@
       <div class="main-video__content">
         <h1 class="main-video__title">Actionable Intelligence Solutions</h1>
         <div class="main-video__btn">
-          <a href="#">Speak with an expert</a>
+          <a class="dialog_btn" href="#">Speak with an expert</a>
         </div>
       </div>
     </div>
@@ -102,7 +169,7 @@
         <p>We provide our clients with tailor made Asset Recovery Plans that match their
           budget and take into account the individual aspects of the case, providing our
           clients with the best value for their hard earned money.</p>
-        <a class="about-btn" href="#">Create an Asset Recovery Plan</a>
+        <a class="about-btn dialog_btn" href="#">Create an Asset Recovery Plan</a>
       </div>
     </div>
     <div class="bottom-image">
@@ -148,7 +215,7 @@
         <p>Financinal recovery uses Investigation Management Software designed for law
           enforcement and intelligence professionals by ex-law enforcement and Intelligence
           professionals</p>
-        <a class="software-btn" href="#">Speak to an Expert</a>
+        <a class="software-btn dialog_btn" href="#">Speak to an Expert</a>
       </div>
       <div class="software-image">
         <img src="images/software_img1.png" alt="Investigation Management">
@@ -214,7 +281,7 @@
       <div class="contact-us__get-started">
         <h3>Get Started</h3>
         <p>We look forward to your business</p>
-        <a class="contact-us__btn" href="#">Book Appointment</a>
+        <a class="contact-us__btn dialog_btn" href="#">Book Appointment</a>
       </div>
     </div>
     <div class="contact-us__bg">
@@ -267,6 +334,6 @@
   </div>
 
 </footer>
-
+<script src="scripts/script.js"></script>
 </body>
 </html>
