@@ -901,6 +901,7 @@ header {
 .footer {
   background-color: #222;
   padding-top: 153px;
+  position: relative;
 
   @media only screen and (max-width: 991px) {
     padding-top: 64px;
