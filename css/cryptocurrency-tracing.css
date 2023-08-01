@@ -46,8 +46,8 @@ header .header-content {
 @media only screen and (max-width: 991px) {
   .cryptocurrency__content {
     flex-direction: column;
-    padding: 144px 15px 103px 15px;
-    align-items: center;
+    padding: 144px 30px 103px 30px;
+    align-items: flex-start;
     gap: 99px;
   }
 }
@@ -168,7 +168,7 @@ header .header-content {
 }
 @media only screen and (max-width: 991px) {
   .cryptocurrency-about__title {
-    margin: 32px 0px 25px;
+    margin: 32px 0 25px;
   }
 }
 .cryptocurrency-about__title h3 {

@@ -40,8 +40,8 @@ header {
 
     @media only screen and (max-width: 991px) {
       flex-direction: column;
-      padding: 144px 15px 103px 15px;
-      align-items: center;
+      padding: 144px 30px 103px 30px;
+      align-items: flex-start;
       gap: 99px;
     }
   }
@@ -160,7 +160,7 @@ header {
     margin: 62px 0 71px;
 
     @media only screen and (max-width: 991px) {
-      margin: 32px 0px 25px;
+      margin: 32px 0 25px;
     }
 
     h3 {
