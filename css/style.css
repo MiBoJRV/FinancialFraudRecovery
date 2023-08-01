@@ -650,6 +650,22 @@ a {
   width: 100%;
   height: auto;
 }
+@media only screen and (max-width: 991px) {
+  .main-video .video {
+    display: none;
+  }
+}
+.main-video .mobile-image {
+  display: none;
+  width: 100%;
+  height: auto;
+  margin-top: 59px;
+}
+@media only screen and (max-width: 991px) {
+  .main-video .mobile-image {
+    display: block;
+  }
+}
 .main-video__content {
   display: flex;
   flex-direction: column;
@@ -686,13 +702,8 @@ a {
     font-size: 31px;
     line-height: 32px;
     margin: 0;
-    top: 64px;
+    top: 142px;
     position: absolute;
-  }
-}
-@media only screen and (max-width: 540px) {
-  .main-video__title {
-    top: 48px;
   }
 }
 @media only screen and (max-width: 991px) {
