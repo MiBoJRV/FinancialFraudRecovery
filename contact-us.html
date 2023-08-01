@@ -10,10 +10,10 @@
   <link rel="stylesheet" type="text/css" href="css/contact-us.css">
 </head>
 <body>
-<header>
+<header class="header">
   <div class="header-content">
     <div class="logo">
-      <a href="/">
+      <a href="index.html">
         <img src="images/main_logo.svg" alt="logo">
       </a>
     </div>
@@ -29,8 +29,94 @@
         <li><a class="nav__link nav__btn" href="contact-us.html">Contact Us</a></li>
       </ul>
     </nav>
-    <div class="mobile-menu">
-      <img src="images/mobile_menu.svg" alt="mobile menu">
+    <div class="mobile-icon">
+       <span class="menu-icon">
+    <img src="images/mobile_menu.svg" alt="mobile menu">
+  </span>
+      <span class="close-icon" style="display: none;">
+    <img src="images/close.svg" alt="close">
+  </span>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <nav class="nav-mobile">
+      <ul class="nav-mobile__list">
+        <li><a class="nav-mobile__link nav-mobile__big-link" href="about-us.html">About Us</a></li>
+        <li><a class="nav-mobile__link nav-mobile__big-link" href="services.html">Services</a></li>
+        <li><a class="nav-mobile__link nav-mobile__btn" href="contact-us.html">Contact Us</a></li>
+        <li><a class="nav-mobile__link" href="locations.html">Locations</a></li>
+        <li><a class="nav-mobile__link" href="consultation.html">Consultation</a></li>
+        <li><a class="nav-mobile__link" href="news.html">News</a></li>
+        <li><a class="nav-mobile__link" href="cryptocurrency-tracing.html">Cryptocurrency Tracing</a></li>
+        <li><a class="nav-mobile__link" href="asset-recovery.html">Asset Recovery </a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="dialog">
+    <div class="dialog__wrap">
+      <div class="dialog__content">
+        <div class="dialog__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <circle cx="17" cy="17" r="17" fill="white"/>
+            <path d="M9 26L25.9706 9.02944" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 9L25.9706 25.9706" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h2>Write your details to get in touch with an expert</h2>
+        <form method="post" id="mypost" action="" class="dr-form">
+
+          <div class="form__field">
+            <span>Name</span>
+            <input type="text" class="dr-field-fname" placeholder="Your name">
+          </div>
+          <div class="form__field">
+            <span>Last Name</span>
+            <input type="text" class="dr-field-lname" placeholder="Your last name">
+          </div>
+          <div class="form__field">
+            <span>E-mail</span>
+            <input type="text" class="dr-field-email" placeholder="E-mail">
+          </div>
+          <div class="phone-input form__field">
+            <div class="select-box">
+              <div class="select-box__current" tabindex="1">
+                <div class="select-box__value">
+                  <span>Phone number</span>
+                  <input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked"/>
+                  <p class="select-box__input-text">+1</p>
+                </div>
+                <div class="select-box__value">
+                  <input class="select-box__input" type="radio" id="1" value="2" name="Ben"/>
+                  <p class="select-box__input-text">+44</p>
+                </div>
+                <div class="select-box__value">
+                  <input class="select-box__input" type="radio" id="2" value="3" name="Ben"/>
+                  <p class="select-box__input-text">+61</p>
+                </div>
+              </div>
+              <ul class="select-box__list">
+                <li>
+                  <label class="select-box__option" for="0" aria-hidden="aria-hidden">+1</label>
+                </li>
+                <li>
+                  <label class="select-box__option" for="1" aria-hidden="aria-hidden">+44</label>
+                </li>
+                <li>
+                  <label class="select-box__option" for="2" aria-hidden="aria-hidden">+61</label>
+                </li>
+              </ul>
+            </div>
+            <input type="text" class="dr-field-phone" placeholder="(xxx) xxx-xxxx">
+            <div class="error-message dr-field-phone-error"></div>
+          </div>
+          <div class="form__field form_submit">
+            <input type="submit" class="dr-field-submit" id="submit_btn" value="Send">
+          </div>
+        </form>
+        <div class="dialog__image">
+          <img src="images/dialog_img.png" alt="dialog">
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -117,7 +203,7 @@
       <div class="contact-us__get-started">
         <h3>Get Started</h3>
         <p>We look forward to your business</p>
-        <a class="contact-us__btn" href="#">Book Appointment</a>
+        <a class="contact-us__btn dialog_btn" href="#">Book Appointment</a>
       </div>
     </div>
     <div class="contact-us__bg">
@@ -133,15 +219,15 @@
       <h5>Quick Links</h5>
       <nav>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Asset Recovery</a></li>
-          <li><a href="#">Consultation</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Crypto Asset Tracing</a></li>
-          <li><a href="#">In The News</a></li>
-          <li><a href="#">Locations</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="asset-recovery.html">Asset Recovery</a></li>
+          <li><a href="consultation.html">Consultation</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="cryptocurrency-tracing.html">Crypto Asset Tracing</a></li>
+          <li><a href="news.html">In The News</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="services.html">Services</a></li>
         </ul>
       </nav>
     </div>

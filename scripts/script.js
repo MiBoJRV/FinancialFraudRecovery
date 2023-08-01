@@ -40,6 +40,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function hideDialog() {
     dialog.style.display = "none";
-    body.style.overflow = 'auto'
+    body.style.overflow = 'auto';
   }
+
+
+  // Mobile menu
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  menuIcon.addEventListener('click', () => {
+    mobileMenu.style.display = 'block';
+    menuIcon.style.display = 'none';
+    closeIcon.style.display = 'inline-block';
+    body.style.overflow = 'hidden'
+  });
+
+  closeIcon.addEventListener('click', () => {
+    mobileMenu.style.display = 'none';
+    menuIcon.style.display = 'inline-block';
+    closeIcon.style.display = 'none';
+    body.style.overflow = 'auto';
+  });
 });
