@@ -823,6 +823,7 @@ a {
   transform: translate(-50%, 0px);
   left: 50%;
   width: 100%;
+  width: 100.5%;
 }
 @media only screen and (max-width: 991px) {
   .about .bg-image {
@@ -837,7 +838,7 @@ a {
   transform: translate(-50%, 0px);
   left: 50%;
   width: 100%;
-  width: 100%;
+  width: 100.5%;
   display: none;
 }
 @media only screen and (max-width: 991px) {
