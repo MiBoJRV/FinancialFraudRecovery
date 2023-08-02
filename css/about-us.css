@@ -320,10 +320,11 @@ header .header-content {
   background-color: transparent;
 }
 .approach-btn:hover {
-  background-color: #FF263D;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .approach-btn:active {
-  background-color: #D5141D;
+  border-color: #BB1123;
+  background-color: transparent;
 }
 @media only screen and (max-width: 991px) {
   .approach-btn {

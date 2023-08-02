@@ -104,12 +104,13 @@ emailField.addEventListener('blur', () => {
 
 const countrySelect = document.querySelector(".select-box__input:checked");
 const phoneInput = document.querySelector('.dr-field-phone');
+const phoneInputWrap = document.querySelector('.phone-input');
 const errorField = document.querySelector('.dr-field-phone-error');
 
 // function updatePhonePlaceholder() {
 //   if (countrySelect.value === '1') {
 //     phoneInput.placeholder = '123 4567 8901 - ca';
-//   } else if ( countrySelect.value === '44') {
+//   } else if (countrySelect.value === '44') {
 //     phoneInput.placeholder = '123 456 7890 - uk';
 //   } else if (countrySelect.value === '61') {
 //     phoneInput.placeholder = '123 456 7890 - au';
@@ -134,18 +135,23 @@ function validatePhoneNumber(event) {
   let errorMessage;
 
   if (truncatedInput.length < minLength || truncatedInput.length > maxLength) {
-    if (selectedCountry === '1') {
+    if (input === '') {
+      errorMessage = 'Field is required'
+      phoneInputWrap.classList.add('error');
+    } else if (selectedCountry === '1' && input !== '') {
+      phoneInputWrap.classList.add('error');
       errorMessage =
         'Please enter your Phone number. Example: 123 4567 8901';
-      phoneInput.classList.add('error');
-    } else if (selectedCountry === '44') {
+    } else if (selectedCountry === '44' && input !== '') {
+      phoneInputWrap.classList.add('error');
       errorMessage =
         'Please enter your Phone number. Example: 123 456 7890';
-    } else if (selectedCountry === '61') {
+    } else if (selectedCountry === '61' && input !== '') {
+      phoneInputWrap.classList.add('error');
       errorMessage =
         'Please enter your Phone number. Example: 123 456 7890';
-    }
-    else {
+    } else {
+      phoneInputWrap.classList.add('error');
       errorMessage = 'Invalid phone number. Please provide a valid phone number.';
     }
 
@@ -154,24 +160,23 @@ function validatePhoneNumber(event) {
   } else {
     errorField.textContent = '';
     event.target.setCustomValidity('');
-    const selectedCountry = countrySelect.value.toUpperCase();
-    let countryCode;
   }
   if (!errorMessage) {
-    phoneInput.classList.remove('error');
+    phoneInputWrap.classList.remove('error');
   }
   event.target.value = truncatedInput;
 }
 
 // countrySelect.addEventListener('change', () => {
-//   if (countrySelect.value !== 'none') {
-//     if (countrySelect.options[0].value === 'none') {
-//       countrySelect.remove(0);
-//     }
-//     updatePhonePlaceholder();
-//   } else {
-//     phoneInput.placeholder = 'Phone';
-//   }
+//   // if (countrySelect.value !== 'none') {
+//   //   if (countrySelect.options[0].value === 'none') {
+//   //     countrySelect.remove(0);
+//   //   }
+//   //   updatePhonePlaceholder();
+//   // } else {
+//   //   phoneInput.placeholder = 'Phone';
+//   // }
+//   updatePhonePlaceholder();
 // });
 
 phoneInput.addEventListener('blur', validatePhoneNumber);

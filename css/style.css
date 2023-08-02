@@ -392,6 +392,7 @@ a {
   top: -64px;
   right: -34px;
   height: 34px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 991px) {
   .dialog__close {
@@ -486,6 +487,9 @@ a {
   font-weight: 400;
   line-height: normal;
 }
+.dialog form input.error {
+  outline: 0.5px solid red;
+}
 .dialog form select {
   margin-bottom: 18px;
   border: none;
@@ -509,6 +513,9 @@ a {
 }
 .dialog form .phone-input {
   display: flex;
+}
+.dialog form .phone-input.error {
+  outline: 0.5px solid red;
 }
 .dialog__image {
   margin: 0 auto 44px auto;

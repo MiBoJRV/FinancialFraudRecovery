@@ -41,6 +41,7 @@
     top: -64px;
     right: -34px;
     height: 34px;
+    cursor: pointer;
 
     @media only screen and (max-width: 991px) {
       right: 0;
@@ -145,6 +146,10 @@
       font-weight: 400;
       line-height: normal;
 
+      &.error {
+        outline: 0.5px solid red;
+      }
+
     }
 
     select {
@@ -174,6 +179,9 @@
 
     .phone-input {
       display: flex;
+      &.error {
+        outline: 0.5px solid red;
+      }
     }
 
 
