@@ -62,4 +62,30 @@ document.addEventListener("DOMContentLoaded", () => {
     closeIcon.style.display = 'none';
     body.style.overflow = 'auto';
   });
+
+  // const selectBox = document.querySelector(".select-box");
+  // const image = document.querySelector(".dialog__image img");
+  //
+  // selectBox.addEventListener("click", function (event) {
+  //   if (event.target.classList.contains("select-box__option")) {
+  //     const selectedValue = event.target.dataset.value;
+  //     updateImage(selectedValue);
+  //   }
+  // });
+  //
+  // function updateImage(selectedValue) {
+  //   let imagePath = "../images/ca.svg"; // Set the default image path here
+  //
+  //   if (selectedValue === "ca") {
+  //     imagePath = "../images/ca.svg"; // Replace with the appropriate image path for Canada
+  //   } else if (selectedValue === "uk") {
+  //     imagePath = "../images/uk.svg"; // Replace with the appropriate image path for the United Kingdom
+  //   } else if (selectedValue === "au") {
+  //     imagePath = "../images/au.svg"; // Replace with the appropriate image path for Australia
+  //   }
+  //
+  //   image.src = imagePath;
+  // }
+
+
 });

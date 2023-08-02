@@ -19,7 +19,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //min-height: calc(100vh + 64px);
     min-height: 100vh;
     width: 100%;
 
@@ -51,7 +50,6 @@
   &__content {
     background: #fff;
     width: 494px;
-    //height: 829px;
     position: relative;
 
     @media only screen and (max-width: 991px) {
@@ -72,7 +70,6 @@
       position: relative;
 
       &.form_submit {
-        //position: inherit;
         margin-top: 77px;
         position: relative;
 
@@ -119,7 +116,6 @@
       background: #FCF1FF;
       height: 40px;
       border: none;
-      //box-shadow: rgba(0, 0, 0, 0.35) -1px 4px 6px;
       padding: 16px 16px 8px;
       color: #403A4B;
       font-family: 'Roboto', sans-serif;;
@@ -137,7 +133,6 @@
       width: 90px;
       background: #FCF1FF;
       height: 40px;
-      //box-shadow: rgba(0, 0, 0, 0.35) -1px 4px 6px;
       padding: 16px 16px 8px;
 
 
@@ -157,10 +152,6 @@
     }
     .phone-input {
       display: flex;
-
-      input {
-        //box-shadow: rgba(0, 0, 0, 0.35) -1px 4px 6px;
-      }
     }
 
 
@@ -198,18 +189,6 @@
   font-size: 18px;
   color: #60666d;
 
-  //@media (min-width: 768px) {
-  //  width: 90px;
-  //}
-  //
-  //@media (min-width: 992px) {
-  //  width: 90px;
-  //}
-  //
-  //@media (min-width: 1200px) {
-  //  width: 90px;
-  //}
-
   &__current {
     position: relative;
     box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
@@ -220,7 +199,6 @@
       & + .select-box__list {
         opacity: 1;
 
-        // We have to set "animation-name: none;" to make the list visible (read below how it works)
 
         animation-name: none;
 
@@ -254,28 +232,30 @@
     display: none;
 
     &:checked + .select-box__input-text {
-      display: block;
+      //display: block;
+      display: flex;
+      justify-content: flex-start;
     }
   }
 
   &__input-text {
     display: none;
-    //width: 100%;
     margin: 0;
-    //padding: 15px;
-    //background-color: #fff;
-
-    //width: 100%;
     background: rgba(0, 0, 0, 0.05);
     height: 40px;
     width: 90px;
     border: none;
-    padding: 16px 16px 8px;
+    padding: 16px 16px 8px 16px;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    position: relative;
+
+    img {
+      margin-right: 6px;
+    }
   }
 
   &__list {
@@ -286,12 +266,6 @@
     list-style: none;
     opacity: 0;
     background: #FCF1FF;
-
-    // We need to use animation with delay.
-    // Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
-    // This delay will not be noticed because we set "opacity" to "0".
-    // We also use "animation-fill-mode: forwards" to make the list stay hidden.
-
     animation-name: HideList;
     animation-duration: 0.5s;
     animation-delay: 0.5s;
@@ -301,27 +275,31 @@
 
     li {
       height: 40px;
+      padding: 16px 16px 8px 16px;
+      position: relative;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+
+        label {
+          background-color: rgba(0, 0, 0, 0.01);
+        }
+      }
     }
   }
 
   &__option {
-    display: block;
-    padding: 15px;
     background-color: #FCF1FF;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display: flex;
+    justify-content: flex-start;
 
-    //&:hover,
-    //&:focus {
-    //  color: #546c84;
-    //  background-color: rgba(0, 0, 0, 0.05);
-    //}
-    &:hover {
-      //color: #546c84;
-      background-color: rgba(0, 0, 0, 0.05);
+    img {
+      margin-right: 6px;
     }
   }
 }

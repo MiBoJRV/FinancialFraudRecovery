@@ -559,7 +559,8 @@ a {
   display: none;
 }
 .select-box__input:checked + .select-box__input-text {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
 }
 .select-box__input-text {
   display: none;
@@ -568,12 +569,16 @@ a {
   height: 40px;
   width: 90px;
   border: none;
-  padding: 16px 16px 8px;
+  padding: 16px 16px 8px 16px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  position: relative;
+}
+.select-box__input-text img {
+  margin-right: 6px;
 }
 .select-box__list {
   position: absolute;
@@ -592,19 +597,27 @@ a {
 }
 .select-box__list li {
   height: 40px;
+  padding: 16px 16px 8px 16px;
+  position: relative;
+}
+.select-box__list li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.select-box__list li:hover label {
+  background-color: rgba(0, 0, 0, 0.01);
 }
 .select-box__option {
-  display: block;
-  padding: 15px;
   background-color: #FCF1FF;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: flex;
+  justify-content: flex-start;
 }
-.select-box__option:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+.select-box__option img {
+  margin-right: 6px;
 }
 
 @keyframes HideList {
