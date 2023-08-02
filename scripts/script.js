@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Find elements
+
+  // Dialog
   const dialog = document.querySelector(".dialog");
   const dialogBtns = document.querySelectorAll(".dialog_btn");
   const dialogClose = document.querySelector(".dialog__close");
   const dialogContent = document.querySelector(".dialog__content");
-  const form = document.getElementById("mypost"); // Get the form element
   const body = document.querySelector('body');
 
   dialogBtns.forEach(btn => {
@@ -20,14 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     hideDialog();
   });
 
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    hideDialog();
-    form.reset();
-  });
-
- body.addEventListener("click", (event) => {
+  body.addEventListener("click", (event) => {
     if (!dialogContent.contains(event.target) && dialog.contains(event.target) ) {
       hideDialog();
     }
@@ -42,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     dialog.style.display = "none";
     body.style.overflow = 'auto';
   }
-
 
   // Mobile menu
   const menuIcon = document.querySelector('.menu-icon');
@@ -63,29 +55,70 @@ document.addEventListener("DOMContentLoaded", () => {
     body.style.overflow = 'auto';
   });
 
-  // const selectBox = document.querySelector(".select-box");
-  // const image = document.querySelector(".dialog__image img");
-  //
-  // selectBox.addEventListener("click", function (event) {
-  //   if (event.target.classList.contains("select-box__option")) {
-  //     const selectedValue = event.target.dataset.value;
-  //     updateImage(selectedValue);
-  //   }
-  // });
-  //
-  // function updateImage(selectedValue) {
-  //   let imagePath = "../images/ca.svg"; // Set the default image path here
-  //
-  //   if (selectedValue === "ca") {
-  //     imagePath = "../images/ca.svg"; // Replace with the appropriate image path for Canada
-  //   } else if (selectedValue === "uk") {
-  //     imagePath = "../images/uk.svg"; // Replace with the appropriate image path for the United Kingdom
-  //   } else if (selectedValue === "au") {
-  //     imagePath = "../images/au.svg"; // Replace with the appropriate image path for Australia
-  //   }
-  //
-  //   image.src = imagePath;
-  // }
+  // Send data
+  function sendLeadData(event) {
+    event.preventDefault();
+    const firstName = document.querySelector('.dr-field-fname').value;
+    const lastName = document.querySelector('.dr-field-lname').value;
+    const email = document.querySelector('.dr-field-email').value;
+    const phoneNumber = document.querySelector('.dr-field-phone').value;
+    const countryCode = document.querySelector(".select-box__input:checked").value;
+    const fullNumber = `+${countryCode}${phoneNumber}`;
 
+    const data = {
+      ApiKey: 'TmpBME1sODFNVEJmTmpBME1sOD0=',
+      ApiPassword: 'Q6M2W2ENwf',
+      CampaignID: '8858',
+      FirstName: firstName,
+      LastName: lastName,
+      Email: email,
+      PhoneNumber: fullNumber,
+    };
 
+    const apiUrl = 'https://tracker.pablo.partners/repost.php?act=register';
+    function encodeFormData(data) {
+      return Object.keys(data)
+        .map(function (key) {
+          return encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        })
+        .join('&')
+    }
+
+    fetch(`${apiUrl}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: encodeFormData(data)
+
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Lead data sent successfully!');
+          form.reset();
+          window.location.href = 'thank-you.html';
+        } else {
+          throw new Error('Failed to send lead data');
+        }
+      })
+      .catch(error => {
+        console.error('An error occurred while sending lead data:', error.message);
+      });
+  }
+
+  const form = document.getElementById('mypost');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const isFirstNameValid = validateFirstName();
+    const isLastNameValid = validateLastName();
+    const isEmailValid = validateEmail();
+    const isPhoneNumberValid = phoneInput.dispatchEvent(new Event('blur'));
+
+    if (isFirstNameValid && isLastNameValid && isEmailValid && isPhoneNumberValid) {
+      sendLeadData(event);
+    } else {
+      console.log('`Not all required fields are correct');
+    }
+  });
 });

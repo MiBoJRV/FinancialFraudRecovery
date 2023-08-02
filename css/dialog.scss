@@ -41,7 +41,7 @@
     top: -64px;
     right: -34px;
     height: 34px;
-    
+
     @media only screen and (max-width: 991px) {
       right: 0;
     }
@@ -53,7 +53,7 @@
     position: relative;
 
     @media only screen and (max-width: 991px) {
-    max-width: 360px;
+      max-width: 360px;
       width: 100%;
     }
   }
@@ -62,16 +62,27 @@
     max-width: 273px;
     width: 100%;
     margin: 0 auto;
-    gap: 9px;
+    gap: 14px;
     display: flex;
     flex-direction: column;
 
     .form__field {
       position: relative;
 
+      .error-message {
+        position: absolute;
+        color: red;
+        font-weight: 700;
+        bottom: -12px;
+        left: 4px;
+        font-size: 9px;
+      }
+
       &.form_submit {
         margin-top: 77px;
         position: relative;
+
+
 
         input {
           color: #FAF9F9;
@@ -85,6 +96,15 @@
           text-transform: uppercase;
           border-radius: 7px;
           padding: 0;
+          cursor: pointer;
+
+          &:hover {
+            background: $red-light-hover;
+          }
+
+          &:active {
+            background: $red-light-click;
+          }
         }
 
         &:after {
@@ -97,6 +117,7 @@
           bottom: -21px;
         }
       }
+
       span {
         color: rgba(64, 58, 75, 0.60);
         font-family: 'Roboto', sans-serif;
@@ -150,12 +171,14 @@
         }
       }
     }
+
     .phone-input {
       display: flex;
     }
 
 
   }
+
   &__image {
     margin: 0 auto 44px auto;
 
@@ -188,6 +211,7 @@
   font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
   font-size: 18px;
   color: #60666d;
+  z-index: 9;
 
   &__current {
     position: relative;

@@ -413,12 +413,20 @@ a {
   max-width: 273px;
   width: 100%;
   margin: 0 auto;
-  gap: 9px;
+  gap: 14px;
   display: flex;
   flex-direction: column;
 }
 .dialog form .form__field {
   position: relative;
+}
+.dialog form .form__field .error-message {
+  position: absolute;
+  color: red;
+  font-weight: 700;
+  bottom: -12px;
+  left: 4px;
+  font-size: 9px;
 }
 .dialog form .form__field.form_submit {
   margin-top: 77px;
@@ -436,6 +444,13 @@ a {
   text-transform: uppercase;
   border-radius: 7px;
   padding: 0;
+  cursor: pointer;
+}
+.dialog form .form__field.form_submit input:hover {
+  background: #FF2731;
+}
+.dialog form .form__field.form_submit input:active {
+  background: #D5141D;
 }
 .dialog form .form__field.form_submit:after {
   content: "";
@@ -525,6 +540,7 @@ a {
   font-family: "Open Sans", "Helvetica Neue", "Segoe UI", "Calibri", "Arial", sans-serif;
   font-size: 18px;
   color: #60666d;
+  z-index: 9;
 }
 .select-box__current {
   position: relative;
