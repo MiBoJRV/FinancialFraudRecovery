@@ -25,12 +25,13 @@
 
 .main-video {
   position: relative;
-  margin-top: -118px;
+  margin-top: -140px;
+
   @media only screen and (max-width: 991px) {
-    //margin: -1px;
-    padding-top: 160px;
+    padding-top: 100px;
     padding-bottom: 160px;
     background-color: $blue;
+    margin-top: 0;
   }
 
   .video-container {
@@ -65,7 +66,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 9;
-    max-width: 915px;
+    max-width: 950px;
     width: 100%;
 
     @media only screen and (max-width: 991px) {
@@ -84,13 +85,18 @@
 
     @media only screen and (max-width: 1024px) {
       font-size: 53px;
+
     }
     @media only screen and (max-width: 991px) {
       font-size: 31px;
       line-height: 32px;
       margin: 0;
-      top: 142px;
+      top: 12px;
       position: absolute;
+    }
+
+    @media only screen and (min-width: 360px) {
+      top: 49px;
     }
   }
 
@@ -111,11 +117,14 @@
       align-items: center;
       justify-content: center;
       max-width: 494px;
-      padding: 7.12px 48.25px 7.76px 48.6px;
+      width: 100%;
+      padding: 10px;
       box-sizing: border-box;
       border-radius: 30px;
       background: $red-strong;
       box-shadow: 0 2px 18px 0 rgba(23, 102, 193, 0.46);
+      text-align: center;
+
 
       &:hover {
         background-color: $red-strong-hover;

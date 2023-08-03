@@ -54,6 +54,11 @@ header .header-content {
   margin-bottom: 18px;
   max-width: 482px;
 }
+@media only screen and (max-width: 991px) {
+  .about-us-banner-text {
+    padding: 0 15px;
+  }
+}
 .about-us-banner-text .title {
   font-size: 55px;
   font-style: normal;

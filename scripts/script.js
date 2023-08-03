@@ -36,23 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
     body.style.overflow = 'auto';
   }
 
-  // Mobile menu
+// Mobile menu
   const menuIcon = document.querySelector('.menu-icon');
   const closeIcon = document.querySelector('.close-icon');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const pageBody = document.querySelector('body');
 
   menuIcon.addEventListener('click', () => {
     mobileMenu.style.display = 'block';
     menuIcon.style.display = 'none';
     closeIcon.style.display = 'inline-block';
-    body.style.overflow = 'hidden'
+    pageBody.style.overflow = 'hidden';
   });
 
   closeIcon.addEventListener('click', () => {
     mobileMenu.style.display = 'none';
     menuIcon.style.display = 'inline-block';
     closeIcon.style.display = 'none';
-    body.style.overflow = 'auto';
+    pageBody.style.overflow = 'auto';
   });
 
   // Send data

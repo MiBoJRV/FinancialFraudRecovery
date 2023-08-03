@@ -32,9 +32,9 @@
 <stop offset="1" stop-color="#5000FF"/>
 </linearGradient>
 <linearGradient id="paint5_linear_130_21" x1="7.61612" y1="9.4312" x2="9.81719" y2="7.2875" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FCA270"/>
-<stop offset="0.494792" stop-color="#FCA170"/>
-<stop offset="1" stop-color="#FF7077"/>
+<stop stop-color="white"/>
+<stop offset="0.494792" stop-color="white"/>
+<stop offset="1" stop-color="white"/>
 </linearGradient>
 <clipPath id="clip0_130_21">
 <rect width="16" height="16" fill="white"/>
