@@ -748,10 +748,15 @@ a {
     top: 49px;
   }
 }
+.main-video__btn {
+  max-width: 494px;
+  width: 100%;
+}
 @media only screen and (max-width: 991px) {
   .main-video__btn {
     position: absolute;
     bottom: 59px;
+    max-width: 257px;
   }
 }
 .main-video__btn a {
@@ -788,7 +793,6 @@ a {
   .main-video__btn a {
     font-size: 18.36px;
     line-height: 28.9px;
-    padding: 4.72px 15.96px 4.72px 15.96px;
   }
 }
 
@@ -863,6 +867,7 @@ a {
   padding: 346px 0 215px;
   max-width: 1920px;
   margin: 0 auto;
+  overflow: hidden;
 }
 @media only screen and (max-width: 991px) {
   .about {
@@ -1030,7 +1035,7 @@ a {
 }
 .about .bottom-image {
   position: absolute;
-  right: 0;
+  right: 4px;
   bottom: -210px;
   z-index: 2;
 }
