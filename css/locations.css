@@ -133,6 +133,10 @@ header .header-content {
     object-fit: cover;
   }
 }
+.location__map .map__content {
+  width: 1400px;
+  height: 500px;
+}
 
 .contact-us {
   background: #15045C;
