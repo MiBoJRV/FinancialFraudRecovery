@@ -1580,7 +1580,7 @@ a {
   color: #666;
 }
 .contact-us__company {
-  padding: 0 40px;
+  padding: 0 40px 29px 40px;
   border-radius: 10px 0 0 10px;
   min-width: 375px;
 }
@@ -1621,6 +1621,7 @@ a {
   font-weight: 700;
   line-height: 25.2px;
   color: #333;
+  padding: 10px 0;
 }
 .contact-us__company .address p:before {
   content: "";
@@ -1665,7 +1666,7 @@ a {
 .contact-us__btn {
   background: radial-gradient(70.71% 70.71% at 50% 50%, #160070 0%, #34004C 100%);
   color: #ffffff;
-  margin-bottom: 73px;
+  margin-bottom: 140px;
   margin-top: 0;
   max-width: 207px;
   padding: 20px 29px 20px 29px;
@@ -1681,6 +1682,11 @@ a {
   line-height: 23.8px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 991px) {
+  .contact-us__btn {
+    margin-bottom: 73px;
+  }
+}
 .contact-us__btn:hover {
   background: radial-gradient(70.71% 70.71% at 50% 50%, #640FA7 0%, #3C0058 100%);
   text-shadow: 0 0 14px #FFF;
@@ -1691,7 +1697,7 @@ a {
 }
 .contact-us .bg-image {
   position: absolute;
-  top: 92px;
+  bottom: -6px;
   z-index: 1;
   transform: translate(-50%, 0px);
   left: 50%;
