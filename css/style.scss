@@ -709,7 +709,8 @@
   }
 
   &__company {
-    padding: 0 40px 29px 40px;
+    //padding: 0 40px;
+    padding: 0 40px 40px 40px;
     border-radius: 10px 0 0 10px;
     min-width: 375px;
 
@@ -754,7 +755,6 @@
         font-weight: 700;
         line-height: 25.2px;
         color: $title-color;
-        padding: 10px 0;
 
         &:before {
           content: '';
@@ -806,15 +806,10 @@
   &__btn {
     background: radial-gradient(70.71% 70.71% at 50% 50%, #160070 0%, #34004C 100%);
     color: $white;
-
-    margin-bottom: 140px;
+    margin-bottom: 73px;
     margin-top: 0;
     max-width: 207px;
     @include radius-button;
-    
-    @media only screen and (max-width: 991px) {
-      margin-bottom: 73px;
-    }
 
     &:hover {
       background: radial-gradient(70.71% 70.71% at 50% 50%, #640FA7 0%, #3C0058 100%);
@@ -829,7 +824,7 @@
 
   .bg-image {
     position: absolute;
-    bottom: -6px;
+    top: 92px;
     z-index: 1;
     transform: translate(-50%, 0px);
     left: 50%;
